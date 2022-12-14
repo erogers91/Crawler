@@ -16,6 +16,9 @@ public class RoomTemplates : MonoBehaviour
     private bool spawnedBoss;
     public GameObject boss;
 
+    public int roomCap;
+    public int roomsCount;
+
     void Update()
     {
         if (waitTime <= 0 && spawnedBoss == false)
