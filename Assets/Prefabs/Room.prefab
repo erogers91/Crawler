@@ -3198,8 +3198,8 @@ MonoBehaviour:
   southWall: {fileID: 8304450535438335874}
   eastWall: {fileID: 8304450534806980675}
   westWall: {fileID: 8304450535625632762}
-  insideWidth: 0
-  insideHeight: 0
+  insideWidth: 7
+  insideHeight: 10
   enemyPrefab: {fileID: 0}
   coinPrefab: {fileID: 0}
   healthPrefab: {fileID: 0}
@@ -3220,7 +3220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8304450534577865377
 Transform:
   m_ObjectHideFlags: 0
@@ -3703,7 +3703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8304450534806980675
 Transform:
   m_ObjectHideFlags: 0
@@ -3899,7 +3899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8304450534878728286
 Transform:
   m_ObjectHideFlags: 0
@@ -4632,7 +4632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8304450535085920041
 Transform:
   m_ObjectHideFlags: 0
@@ -5403,7 +5403,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8304450535272081786
 Transform:
   m_ObjectHideFlags: 0
@@ -5997,7 +5997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8304450535438335874
 Transform:
   m_ObjectHideFlags: 0
@@ -6586,7 +6586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8304450535625632762
 Transform:
   m_ObjectHideFlags: 0
@@ -6731,7 +6731,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8304450535648199788
 Transform:
   m_ObjectHideFlags: 0

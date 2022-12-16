@@ -7,6 +7,9 @@ public class Generation : MonoBehaviour
     public int mapWidth = 7;
     public int mapHeight = 7;
     public int roomsToGenerate = 12;
+    public bool randomSeed = true;
+    // TODO: Allow user to input a seed
+    public int userSeed;
 
 
     private int roomCount;
@@ -28,7 +31,9 @@ public class Generation : MonoBehaviour
 
     void Start()
     {
-        Random.InitState(78785745);
+        int rnd = Random.Range(1010, 999999);
+        Random.InitState(randomSeed == true ?  rnd : userSeed);
+        Debug.Log($"Seed: {rnd}");
         Generate();
     }
 

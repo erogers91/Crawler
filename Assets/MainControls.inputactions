@@ -126,6 +126,17 @@
                 {
                     "name": "",
                     "id": "fb7b4c3f-2413-403e-824b-c5e4c5009d14",
+                    "path": "<Keyboard>/numpad8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "05b451cc-15d2-48b6-91f0-193cc6eb8ddb",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
@@ -137,6 +148,17 @@
                 {
                     "name": "",
                     "id": "d5e9bf7f-6798-4fc7-a742-0eb1a4f5c290",
+                    "path": "<Keyboard>/numpad2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df4946d7-d3e6-4b41-a899-e47c1a87ee60",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
@@ -148,6 +170,17 @@
                 {
                     "name": "",
                     "id": "ab40a6aa-77d6-4a6f-82ba-fd2762910aa0",
+                    "path": "<Keyboard>/numpad4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2d61e3c0-0d38-4c21-8388-6d3174ee0f8c",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
@@ -159,6 +192,17 @@
                 {
                     "name": "",
                     "id": "600eb270-bfd1-40b3-98f6-640038ebfe99",
+                    "path": "<Keyboard>/numpad6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e9765957-f85a-4ef7-86c7-ceb620af5209",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
