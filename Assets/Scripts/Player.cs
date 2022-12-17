@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
 
     public int curHp;
-    public int maxHP;
+    public int maxHp;
     public int coins;
     public int damage = 1;
     public bool hasKey;
@@ -116,7 +116,6 @@ public class Player : MonoBehaviour
 
     }
 
-
     IEnumerator DamageFlash()
     {
         Color defaultColor = sr.color;
@@ -125,5 +124,23 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(hitColorDuration);
 
         sr.color = defaultColor;
+    }
+    
+    public void AddCoins(int amount)
+    {
+        coins += amount;
+        // update the UI
+    }
+
+    public bool AddHealth(int amount)
+    {
+        if(curHp + amount <= maxHp)
+        {
+            curHp += amount;
+            // update th UI
+            return true;
+        }
+
+        return false;
     }
 }
