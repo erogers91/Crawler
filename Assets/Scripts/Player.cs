@@ -25,9 +25,8 @@ public class Player : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 1.0f, moveLayerMask);
 
         if (hit.collider == null)
-        {
             transform.position += new Vector3(dir.x, dir.y, 0);
-        }
+            
     }
 
     public void OnMoveUp(InputAction.CallbackContext context)
@@ -100,9 +99,7 @@ public class Player : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 1.0f, attackLayerMask);
 
         if (hit.collider != null)
-        {
             hit.transform.GetComponent<Enemy>().TakeDamage(damage);
-        }
     }
 
     public void TakeDamage(int damageToTake)

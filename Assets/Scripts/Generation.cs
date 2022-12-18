@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Generation : MonoBehaviour
 {
+    [Header("Map Diminsions")]
     public int mapWidth = 7;
     public int mapHeight = 7;
     public int roomsToGenerate = 12;
@@ -23,6 +24,17 @@ public class Generation : MonoBehaviour
     private List<Room> roomObjects = new List<Room>();
 
     public static Generation instance;
+
+    // spawn chances
+    [Header("Spawn Chances")]
+    public float enemySpawnChance;
+    public float coinSpawnChance;
+    public float healthSpawnChance;
+
+    [Header("Max Amounts")]
+    public int maxEnemiesPerRoom;
+    public int maxCoinsPerRoom;
+    public int maxHealthPerRoom;
 
     void Awake()
     {
@@ -48,21 +60,20 @@ public class Generation : MonoBehaviour
     void CheckRoom(int x, int y, int remaining, Vector2 generalDirection, bool firstRoom = false)
     {
         if (roomCount >= roomsToGenerate)
-        { return; }
+            return;
 
         if (x < 0 || x > mapWidth - 1 || y < 0 || y > mapHeight - 1)
-        { return; }
+            return;
 
         if (firstRoom == false && remaining <= 0)
-        { return; }
+            return;
 
         if (map[x, y] == true)
-        { return; }
+            return;
 
         if (firstRoom == true)
-        {
             firstRoomPos = new Vector2(x, y);
-        }
+
         roomCount++;
         map[x, y] = true;
 
@@ -74,27 +85,22 @@ public class Generation : MonoBehaviour
         int maxRemaining = roomsToGenerate / 4;
 
         if (north || firstRoom)
-        {
             CheckRoom(x, y + 1, firstRoom ? maxRemaining : remaining - 1, firstRoom ? Vector2.up : generalDirection);
-        }
+
         if (south || firstRoom)
-        {
             CheckRoom(x, y - 1, firstRoom ? maxRemaining : remaining - 1, firstRoom ? Vector2.down : generalDirection);
-        }
+
         if (east || firstRoom)
-        {
             CheckRoom(x + 1, y, firstRoom ? maxRemaining : remaining - 1, firstRoom ? Vector2.right : generalDirection);
-        }
+
         if (west || firstRoom)
-        {
             CheckRoom(x - 1, y, firstRoom ? maxRemaining : remaining - 1, firstRoom ? Vector2.left : generalDirection);
-        }
     }
 
     void InstantiateRooms()
     {
         if (roomsInstatiated)
-        { return; }
+            return;
 
         roomsInstatiated = true;
 
@@ -103,9 +109,7 @@ public class Generation : MonoBehaviour
             for (int y = 0; y < mapHeight; ++y)
             {
                 if (map[x, y] == false)
-                {
                     continue;
-                }
 
                 GameObject roomObj = Instantiate(roomPrefab, new Vector3(x, y, 0) * 12, Quaternion.identity);
                 Room room = roomObj.GetComponent<Room>();
@@ -134,7 +138,7 @@ public class Generation : MonoBehaviour
                 }
 
                 if (firstRoomPos != new Vector2(x, y))
-                { room.GenerateInterior(); }
+                    room.GenerateInterior();
 
                 roomObjects.Add(room);
             }

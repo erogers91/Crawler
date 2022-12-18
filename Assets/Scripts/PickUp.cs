@@ -17,10 +17,13 @@ public class PickUp : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             if(type == PickupType.Coin) {
-                {
-                    other.GetComponent<Player>().AddCoins(value);
-                    Destroy(gameObject);
-                }
+                other.GetComponent<Player>().AddCoins(value);
+                Destroy(gameObject);
+            }
+            else if(type == PickupType.Health) 
+            {
+                other.GetComponent<Player>().AddHealth(value);
+                Destroy(gameObject);
             }
         }
     }
