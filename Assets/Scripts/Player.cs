@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public int curHp;
     public int maxHp;
     public int coins;
+    public int keys;
     public int damage = 1;
     public bool hasKey;
     public Color hitColor = Color.red;
@@ -33,7 +34,7 @@ public class Player : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed)
         {
-            Debug.Log("Move LEFT");
+            Debug.Log("Move Up");
             Move(Vector2.up);
         }
     }
@@ -41,7 +42,7 @@ public class Player : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed)
         {
-            Debug.Log("Move LEFT");
+            Debug.Log("Move Down");
             Move(Vector2.down);
         }
     }
@@ -49,7 +50,7 @@ public class Player : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed)
         {
-            Debug.Log("Move LEFT");
+            Debug.Log("Move Left");
             Move(Vector2.left);
         }
     }
@@ -57,7 +58,7 @@ public class Player : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed)
         {
-            Debug.Log("Move LEFT");
+            Debug.Log("Move Right");
             Move(Vector2.right);
         }
     }
@@ -65,7 +66,7 @@ public class Player : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed)
         {
-            Debug.Log("Attack UP");
+            Debug.Log("Attack Up");
             TryAttack(Vector2.up);
         }
     }
@@ -73,7 +74,7 @@ public class Player : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed)
         {
-            Debug.Log("Attack DOWN");
+            Debug.Log("Attack Down");
             TryAttack(Vector2.down);
         }
     }
@@ -81,7 +82,7 @@ public class Player : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed)
         {
-            Debug.Log("Attack LEFT");
+            Debug.Log("Attack Left");
             TryAttack(Vector2.left);
         }
     }
@@ -89,7 +90,7 @@ public class Player : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed)
         {
-            Debug.Log("Attack RIGHT");
+            Debug.Log("Attack Right");
             TryAttack(Vector2.right);
         }
     }
@@ -119,14 +120,32 @@ public class Player : MonoBehaviour
         sr.color = hitColor;
 
         yield return new WaitForSeconds(hitColorDuration);
-
-        sr.color = defaultColor;
+        if(sr.color == hitColor){
+            sr.color = defaultColor;
+        }
+        
     }
     
     public void AddCoins(int amount)
     {
         coins += amount;
         // update the UI
+    }
+    public void AddKey(int amount)
+    {
+        keys += amount;
+        hasKey = true;
+        // update the UI
+    }
+    public void UseKey(int amount)
+    {
+        if(keys > 0)
+        {
+            keys -= amount;
+            hasKey = false;
+            // update the UI
+        }
+
     }
 
     public bool AddHealth(int amount)
@@ -137,7 +156,6 @@ public class Player : MonoBehaviour
             // update th UI
             return true;
         }
-
         return false;
     }
 }

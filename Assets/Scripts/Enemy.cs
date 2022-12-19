@@ -27,19 +27,14 @@ public class Enemy : MonoBehaviour
         if(health <= 0)
         {
             if(deathDropPrefab != null)
-            {
-                // Drop item
                 Instantiate(deathDropPrefab, transform.position, Quaternion.identity);
-            }
             Destroy(gameObject);
         }
 
         StartCoroutine(DamageFlash());
 
         if(Random.value > attackChance)
-        {
             player.TakeDamage(damage);
-        }
     }
 
     IEnumerator DamageFlash()
@@ -48,16 +43,15 @@ public class Enemy : MonoBehaviour
         sr.color = Color.red;
 
         yield return new WaitForSeconds(0.05f);
-
+        if(sr.color != defaultColor) 
+            sr.color = defaultColor;
         sr.color = defaultColor;
     }
 
     public void Move()
     {
         if (Random.value < 0.5f)
-        {
             return;
-        }
 
         Vector3 dir = Vector3.zero;
         bool canMove = false;
@@ -69,9 +63,7 @@ public class Enemy : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 1.0f, moveLayerMask);
 
             if(hit.collider == null)
-            {
                 canMove = true;
-            }
         }
     }
     
