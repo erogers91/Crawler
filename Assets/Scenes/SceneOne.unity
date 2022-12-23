@@ -212,7 +212,7 @@ MonoBehaviour:
   enemySpawnChance: 0.7
   coinSpawnChance: 0.8
   healthSpawnChance: 0.3
-  maxEnemiesPerRoom: 1
+  maxEnemiesPerRoom: 2
   maxCoinsPerRoom: 2
   maxHealthPerRoom: 2
 --- !u!114 &385497880

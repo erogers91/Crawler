@@ -59,12 +59,12 @@ public class Enemy : MonoBehaviour
         while (canMove == false)
         {
             dir = GetRandomDirection();
-            Debug.Log("Random Direction Attempt! " + dir);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 1.0f, moveLayerMask);
 
             if(hit.collider == null)
                 canMove = true;
         }
+        
         transform.position += dir;
     }
     
@@ -80,7 +80,7 @@ public class Enemy : MonoBehaviour
             return Vector3.left;
         else if (ran == 3)
             return Vector3.right;
-            
-        return Vector3.zero;
+        else
+            return Vector3.zero;
     }
 }
