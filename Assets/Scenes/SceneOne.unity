@@ -204,15 +204,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapWidth: 7
   mapHeight: 7
-  roomsToGenerate: 12
+  roomsToGenerate: 15
   randomSeed: 1
   userSeed: 0
   roomPrefab: {fileID: 8304450534527597437, guid: 7705bc9f9f0ed714288dc138d99c7688, type: 3}
+  roomObjects: []
   enemySpawnChance: 0.7
   coinSpawnChance: 0.8
   healthSpawnChance: 0.3
-  maxEnemiesPerRoom: 2
-  maxCoinsPerRoom: 5
+  maxEnemiesPerRoom: 1
+  maxCoinsPerRoom: 2
   maxHealthPerRoom: 2
 --- !u!114 &385497880
 MonoBehaviour:

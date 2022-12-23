@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
 
         if (hit.collider == null)
             transform.position += new Vector3(dir.x, dir.y, 0);
+            EnemyManager.instance.OnPlayerMove();
             
     }
 
@@ -131,7 +132,7 @@ public class Player : MonoBehaviour
         coins += amount;
         // update the UI
     }
-    
+
     public bool AddHealth(int amount)
     {
         if(curHp + amount <= maxHp)

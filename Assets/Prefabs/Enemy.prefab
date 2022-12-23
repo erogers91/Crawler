@@ -138,7 +138,7 @@ MonoBehaviour:
   sr: {fileID: 611484712289096619}
   moveLayerMask:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 2147483647
 --- !u!61 &611484712347375131
 BoxCollider2D:
   m_ObjectHideFlags: 0

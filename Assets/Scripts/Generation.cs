@@ -21,7 +21,7 @@ public class Generation : MonoBehaviour
     private bool[,] map;
     public GameObject roomPrefab;
 
-    private List<Room> roomObjects = new List<Room>();
+    public List<Room> roomObjects = new List<Room>();
 
     public static Generation instance;
 
