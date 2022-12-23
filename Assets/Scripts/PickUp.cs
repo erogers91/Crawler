@@ -25,13 +25,9 @@ public class PickUp : MonoBehaviour
             }
             else if (type == PickupType.Health)
             {
-                other.GetComponent<Player>().AddHealth(value);
-                Destroy(gameObject);
-            }
-            else if (type == PickupType.Key)
-            {
-                other.GetComponent<Player>().AddKey(value);
-                Destroy(gameObject);
+                bool consuming = other.GetComponent<Player>().AddHealth(value);
+                if(consuming)
+                    Destroy(gameObject);
             }
         }
     }

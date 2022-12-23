@@ -131,23 +131,7 @@ public class Player : MonoBehaviour
         coins += amount;
         // update the UI
     }
-    public void AddKey(int amount)
-    {
-        keys += amount;
-        hasKey = true;
-        // update the UI
-    }
-    public void UseKey(int amount)
-    {
-        if(keys > 0)
-        {
-            keys -= amount;
-            hasKey = false;
-            // update the UI
-        }
-
-    }
-
+    
     public bool AddHealth(int amount)
     {
         if(curHp + amount <= maxHp)
@@ -156,6 +140,7 @@ public class Player : MonoBehaviour
             // update th UI
             return true;
         }
+
         return false;
     }
 }
