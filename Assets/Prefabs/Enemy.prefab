@@ -110,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611484712347375129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -130,15 +130,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472db0fb27d042445a4bf207d66ec500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1982037747094551331, guid: 2b3b06bda10db6849aa35e77a18fdf8d, type: 3}
   health: 3
   damage: 1
   attackChance: 0.5
-  deathDropPrefab: {fileID: 0}
+  deathDropPrefab: {fileID: 623911787888172939, guid: 36695942d52d52a4abf3272885c8baaa, type: 3}
   sr: {fileID: 611484712289096619}
   moveLayerMask:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 759
 --- !u!61 &611484712347375131
 BoxCollider2D:
   m_ObjectHideFlags: 0

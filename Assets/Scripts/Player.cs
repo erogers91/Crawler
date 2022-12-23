@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 
         if (hit.collider == null)
             transform.position += new Vector3(dir.x, dir.y, 0);
-            // EnemyManager.instance.OnPlayerMove();
+            EnemyManager.instance.OnPlayerMove();
             
     }
 

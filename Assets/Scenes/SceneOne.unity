@@ -212,7 +212,7 @@ MonoBehaviour:
   enemySpawnChance: 0.7
   coinSpawnChance: 0.8
   healthSpawnChance: 0.3
-  maxEnemiesPerRoom: 2
+  maxEnemiesPerRoom: 0
   maxCoinsPerRoom: 2
   maxHealthPerRoom: 2
 --- !u!114 &385497880
@@ -227,7 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d037cb5f9671274592c717442fd466c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: []
+  enemies:
+  - {fileID: 611484712347375130, guid: eed256030a270ca4680633f31bd95c2e, type: 3}
 --- !u!1 &1270674941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6607000279135197963, guid: 0f403e37291a4564ea6ccd62018862d9, type: 3}
