@@ -59,11 +59,12 @@ public class GameManager : MonoBehaviour
             UI.instance.UpdateCoinText(0);
             UI.instance.UpdateLevelText(level);
         }
-        else
+
+        if (player.hasKey)
         {
             level++;
             baseSeed++;
-            
+
             Generation.instance.Generate();
 
             player.curHp = prevRoomPlayerHealth;
@@ -73,5 +74,6 @@ public class GameManager : MonoBehaviour
             UI.instance.UpdateCoinText(prevRoomPlayerCoins);
             UI.instance.UpdateLevelText(level);
         }
+
     }
 }
