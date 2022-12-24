@@ -5,9 +5,9 @@ using UnityEngine;
 public class Generation : MonoBehaviour
 {
     [Header("Map Diminsions")]
-    public int mapWidth = 7;
-    public int mapHeight = 7;
-    public int roomsToGenerate = 12;
+    public int mapWidth;
+    public int mapHeight;
+    public int roomsToGenerate;
     public bool randomSeed = true;
     // TODO: Allow user to input a seed
     public int userSeed;
@@ -148,6 +148,25 @@ public class Generation : MonoBehaviour
 
     void CalculateKeyAndExit()
     {
+        float maxDistance = 0;
+        Room a = null;
+        Room b = null;
 
+        foreach(Room aRoom in roomObjects)
+        {
+            foreach(Room bRoom in roomObjects)
+            {
+                float distance = Vector3.Distance(aRoom.transform.position,bRoom.transform.position);
+                if(distance > maxDistance)
+                {
+                    a = aRoom;
+                    b = bRoom;
+                    maxDistance = distance;
+                }
+            }
+        }
+
+        a.SpawnPrefab(a.keyPrefab);
+        b.SpawnPrefab(b.exitDoorPrefab);
     }
 }

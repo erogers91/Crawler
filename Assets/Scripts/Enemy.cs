@@ -52,6 +52,7 @@ public class Enemy : MonoBehaviour
     {
         if (Random.value < 0.5f)
             return;
+
         Vector3 dir = Vector3.zero;
         bool canMove = false;
 
@@ -60,30 +61,30 @@ public class Enemy : MonoBehaviour
         {
             dir = GetRandomDirection();
             // cast a ray into the direction.
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 1.0f, 1 << 9);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 2.0f, moveLayerMask);
             // if the ray hasn't detected any obstacle,
             if (hit.collider == null)
-                // end of while loop
-                canMove = true;
+                {canMove = true;}
 
             i++;
             if (i == 50)
                 break;
-        }
-        // move towards the direction
+        }        // move towards the direction
         transform.position += dir;
     }
+    // returns a random direction - up, down, left or right
     Vector3 GetRandomDirection()
     {
         // Get a random number between 0 and 4
-        int ran = Random.Range(0, 4);
-        if (ran == 0)
+        int rand = Random.Range(0, 4);
+
+        if (rand == 0)
             return Vector3.up;
-        else if (ran == 1)
+        else if (rand == 1)
             return Vector3.down;
-        else if (ran == 2)
+        else if (rand == 2)
             return Vector3.left;
-        else if (ran == 3)
+        else if (rand == 3)
             return Vector3.right;
         return Vector3.zero;
     }

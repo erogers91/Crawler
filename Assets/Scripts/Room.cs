@@ -26,7 +26,7 @@ public class Room : MonoBehaviour
     public GameObject keyPrefab;
     public GameObject exitDoorPrefab;
 
-    private List<Vector3> usedPositions = new List<Vector3>();
+    private readonly List<Vector3> usedPositions = new();
 
 
     public void GenerateInterior()
@@ -50,7 +50,7 @@ public class Room : MonoBehaviour
         if (min != 0 || max != 0)
             num = Random.Range(min, max);
 
-        for (int x = 0; x < num; ++x)
+        for (int x = 0; x < num; x++)
         {
             GameObject obj = Instantiate(prefab);
             Vector3 pos = transform.position + new Vector3(Random.Range(-insideWidth / 2, insideWidth / 2 + 1), Random.Range(-insideHeight / 2, insideHeight / 2 + 1), 0);
