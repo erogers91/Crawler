@@ -178,7 +178,7 @@ MonoBehaviour:
   enemySpawnChance: 0.7
   coinSpawnChance: 0.8
   healthSpawnChance: 0.3
-  maxEnemiesPerRoom: 0
+  maxEnemiesPerRoom: 1
   maxCoinsPerRoom: 2
   maxHealthPerRoom: 2
 --- !u!114 &385497880
@@ -202,10 +202,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4956259226919484022, guid: 2b3b06bda10db6849aa35e77a18fdf8d, type: 3}
-      propertyPath: m_DefaultActionMap
-      value: Main
-      objectReference: {fileID: 0}
     - target: {fileID: 6065201581419956756, guid: 2b3b06bda10db6849aa35e77a18fdf8d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -224,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6065201581419956763, guid: 2b3b06bda10db6849aa35e77a18fdf8d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6065201581419956763, guid: 2b3b06bda10db6849aa35e77a18fdf8d, type: 3}
       propertyPath: m_LocalRotation.w

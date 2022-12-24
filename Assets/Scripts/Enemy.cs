@@ -5,7 +5,6 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Player player;
-
     public int health;
     public int damage = 1;
     public float attackChance = 0.5f;
@@ -61,16 +60,18 @@ public class Enemy : MonoBehaviour
         {
             dir = GetRandomDirection();
             // cast a ray into the direction.
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 2.0f, moveLayerMask);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 1.0f, moveLayerMask);
             // if the ray hasn't detected any obstacle,
             if (hit.collider == null)
-                {canMove = true;}
+            {
+                canMove = true;
+            }
 
             i++;
             if (i == 50)
                 break;
-        }        // move towards the direction
-        transform.position += dir;
+        }
+        transform.position += new Vector3(dir.x, dir.y, 0);
     }
     // returns a random direction - up, down, left or right
     Vector3 GetRandomDirection()
@@ -86,6 +87,7 @@ public class Enemy : MonoBehaviour
             return Vector3.left;
         else if (rand == 3)
             return Vector3.right;
+
         return Vector3.zero;
     }
 }
