@@ -8,7 +8,7 @@ public class ExitDoor : MonoBehaviour
         
         if(other.CompareTag("Player"))
         {
-            Debug.Log("Go to the next Level");
+            GameManager.instance.GoToNextLevel();
         }
     }
 }

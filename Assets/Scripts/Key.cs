@@ -6,7 +6,7 @@ public class Key : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision) {
         collision.GetComponent<Player>().hasKey = true;
-        // update UI
+        UI.instance.ToggleKeyIcon(true);
         Destroy(gameObject);
     }
 }
