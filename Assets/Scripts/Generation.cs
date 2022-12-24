@@ -167,6 +167,6 @@ public class Generation : MonoBehaviour
         }
 
         a.SpawnPrefab(a.keyPrefab);
-        // b.SpawnPrefab(b.exitDoorPrefab);
+        b.SpawnPrefab(b.exitDoorPrefab);
     }
 }

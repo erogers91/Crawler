@@ -171,13 +171,13 @@ MonoBehaviour:
   southWall: {fileID: 8304450535438335874}
   eastWall: {fileID: 8304450534806980675}
   westWall: {fileID: 8304450535625632762}
-  insideWidth: 5
-  insideHeight: 5
+  insideWidth: 7
+  insideHeight: 7
   enemyPrefab: {fileID: 611484712347375129, guid: eed256030a270ca4680633f31bd95c2e, type: 3}
   coinPrefab: {fileID: 623911787888172939, guid: 36695942d52d52a4abf3272885c8baaa, type: 3}
   healthPrefab: {fileID: 4355933451671843020, guid: 7e5bf19601263dc46a2eb6847d034f74, type: 3}
   keyPrefab: {fileID: 6607000279135197963, guid: 0f403e37291a4564ea6ccd62018862d9, type: 3}
-  exitDoorPrefab: {fileID: 0}
+  exitDoorPrefab: {fileID: 7226549008711031728, guid: d08ca7f864db8fe449fe7c66f25107ab, type: 3}
 --- !u!1 &8304450535043389040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,6 +2593,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8304450534290689702}
     m_Modifications:
+    - target: {fileID: 3995283550310472033, guid: 98a6f584ea2b30f4ea9a9c017ad92a96, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.344
+      objectReference: {fileID: 0}
     - target: {fileID: 4271683267809201484, guid: 98a6f584ea2b30f4ea9a9c017ad92a96, type: 3}
       propertyPath: m_Name
       value: SouthDoor
